@@ -1,7 +1,7 @@
 {
-    "title": "Hipster",
+    "title": "Next Template",
     "welcome": "Welcome",
-    "description": "Bible-based Game inspired by Hitster",
+    "description": "Next.js Template basic structure with i18n support and theme switcher",
     "language": "Language",
     "spanish": "Español",
     "english": "English",

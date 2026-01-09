@@ -1,11 +1,11 @@
 {
-    "title": "Hipster",
+    "title": "Next Template",
     "welcome": "Bienvenido",
-    "description": "Juego Bíblico basado en Hitster",
+    "description": "Estructura básica de plantilla Next.js con soporte i18n y cambiador de temas",
     "language": "Idioma",
     "spanish": "Español",
     "english": "English",
     "startGame": "Iniciar Juego",
     "slug.game": "juego",
-    "game":"Juego"
+    "game": "Juego"
 }

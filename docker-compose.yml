@@ -19,8 +19,8 @@ services:
       context: .
       dockerfile: Dockerfile.nginx
     container_name: next-template-nginx
-    expose:
-      - "80"
+    ports:
+      - "3000:80"
     depends_on:
       - app
     restart: unless-stopped
