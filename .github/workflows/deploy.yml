@@ -1,0 +1,20 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+  
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Trigger deployment webhook
+        run: |
+          curl -X POST https://v3.ismola.dev/api/stacks/webhooks/13c81ac4-570c-4de5-a6bb-4e6b1e83d10f
+          echo "✓ Deployment webhook triggered successfully"

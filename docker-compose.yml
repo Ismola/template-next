@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: next-template-app
+    ports:
+      - "3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - test-network
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    container_name: next-template-nginx
+    expose:
+      - "80"
+    depends_on:
+      - app
+    restart: unless-stopped
+    networks:
+      - test-network
+      - cloudflare_default
+
+networks:
+  test-network:
+    driver: bridge
+  cloudflare_default:
+    external: true
