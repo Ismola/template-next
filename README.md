@@ -6,7 +6,7 @@ Plantilla minimalista de Next.js enfocada en internacionalización y cambio de t
 
 ## Demo
 
-DEMO: <https://next-template.ismola.dev>
+DEMO: https://template-next.ismola.dev/
 
 ## Características
 
